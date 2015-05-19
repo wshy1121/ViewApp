@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\GameLayer">
+      <UniqueIdentifier>{9eddac9d-066d-4fdc-b010-1ad39fe79a9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\GameObject">
+      <UniqueIdentifier>{7fed349c-500d-4988-8787-9a11303bd1a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Sqlite">
+      <UniqueIdentifier>{7c45285d-00b6-4176-9751-2d71f98ea64f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLayer\InGameLayer.cpp">
+      <Filter>Classes\GameLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLayer\WelcomeLayer.cpp">
+      <Filter>Classes\GameLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameObject\Background.cpp">
+      <Filter>Classes\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameObject\Bullet.cpp">
+      <Filter>Classes\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameObject\EnemyFly.cpp">
+      <Filter>Classes\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameObject\PlayerFly.cpp">
+      <Filter>Classes\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameData.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLayer\InVerifyLayer.cpp">
+      <Filter>Classes\GameLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLayer\InTraceLayer.cpp">
+      <Filter>Classes\GameLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Sqlite\CppSQLite3.cpp">
+      <Filter>Classes\Sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Sqlite\sqlite3.c">
+      <Filter>Classes\Sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Sqlite\SqliteManager.cpp">
+      <Filter>Classes\Sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\VisibleRect.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLayer\ListViewLayer.cpp">
+      <Filter>Classes\GameLayer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLayer\InGameLayer.h">
+      <Filter>Classes\GameLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLayer\WelcomeLayer.h">
+      <Filter>Classes\GameLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameObject\Background.h">
+      <Filter>Classes\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameObject\Bullet.h">
+      <Filter>Classes\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameObject\EnemyFly.h">
+      <Filter>Classes\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameObject\PlayerFly.h">
+      <Filter>Classes\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameData.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLayer\InVerifyLayer.h">
+      <Filter>Classes\GameLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLayer\InTraceLayer.h">
+      <Filter>Classes\GameLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Sqlite\CppSQLite3.h">
+      <Filter>Classes\Sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Sqlite\sqlite3.h">
+      <Filter>Classes\Sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Sqlite\SqliteManager.h">
+      <Filter>Classes\Sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\VisibleRect.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLayer\ListViewLayer.h">
+      <Filter>Classes\GameLayer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
