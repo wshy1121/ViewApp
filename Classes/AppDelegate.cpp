@@ -1,5 +1,7 @@
 #include "AppDelegate.h"
 #include "GameLayer/WelcomeLayer.h"
+#include "trace_worker.h"
+#include "net_server.h"
 
 USING_NS_CC;
 
@@ -12,11 +14,14 @@ AppDelegate::~AppDelegate()
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
+	CNetServer::instance()->startServer();
+	trace_start("127.0.0.1", 880110, "Debug11.cpp");
+	
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLView::createWithRect("My Game",Rect(0,0,320,568));
+        glview = GLViewImpl::createWithRect("My Game",Rect(0,0,320,568));
         director->setOpenGLView(glview);
     }
 

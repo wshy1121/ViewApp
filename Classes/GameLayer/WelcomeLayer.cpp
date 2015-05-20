@@ -30,7 +30,6 @@ bool WelcomeLayer::init()
 {
 	Layer::init();
 	initResource();
-	initLogManager();
 	initCocosStudio();
 	return true;
 }
@@ -38,12 +37,7 @@ void WelcomeLayer::initResource()
 {
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("gameArts.plist");
 }
-void WelcomeLayer::initLogManager()
-{
-	CNetServer::instance()->startServer();
-	trace_worker();
-	return ;
-}
+
 void WelcomeLayer::initBackground()
 {
 	Size winSize	=	Director::getInstance()->getVisibleSize();

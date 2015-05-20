@@ -21,7 +21,6 @@ public:
 private:
 	void initResource();
 	void initCocosStudio();
-	void initLogManager();
 	void initBackground();
 	void logoAction();
 	void menuCallBack(cocos2d::Ref* sender);

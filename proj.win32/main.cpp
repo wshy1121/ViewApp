@@ -11,7 +11,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 {
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
-	trace_start("127.0.0.1", 880110, "Debug11.cpp");
+
     // create the application instance
     AppDelegate app;
     return Application::getInstance()->run();

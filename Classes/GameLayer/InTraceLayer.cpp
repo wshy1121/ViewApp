@@ -52,7 +52,7 @@ bool InTraceLayer::init()
 	initCocosStudio(pLayer);
 	
 	m_pScrollView = ScrollView::create(CCSizeMake(320,568), pLayer);
-	m_pScrollView->setContentOffset(CCPointZero);
+	m_pScrollView->setContentOffset(Vec2::ZERO);
 	m_pScrollView->setTouchEnabled(false);
 	m_pScrollView->setDelegate(this);
 	m_pScrollView->setDirection(ScrollView::Direction::HORIZONTAL);

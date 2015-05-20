@@ -22,13 +22,13 @@ bool ListViewLayer::init()
 	CNetClient::instance()->getTraceFileList(m_fileList);
 
 	Sprite *pSprite = Sprite::createWithSpriteFrameName("background_2.png");
-	pSprite->setPosition(CCPointZero);
-	pSprite->setAnchorPoint(CCPointZero);
+	pSprite->setPosition((Vec2::ZERO));
+	pSprite->setAnchorPoint((Vec2::ZERO));
 	this->addChild(pSprite);
 
 	m_tableView = TableView::create(this, CCSizeMake(320, 568));
 	m_tableView->setDirection(ScrollView::Direction::VERTICAL);
-	m_tableView->setPosition(CCPointZero);
+	m_tableView->setPosition((Vec2::ZERO));
 	m_tableView->setDelegate(this);
 	m_tableView->setVerticalFillOrder(cocos2d::extension::TableView::VerticalFillOrder::TOP_DOWN);
 	this->addChild(m_tableView);
@@ -101,13 +101,13 @@ TableViewCell *ListViewLayer::createTableCell()
 	pCell->autorelease();
 	trace_printf("NULL");
 	CCSprite *pSprite = CCSprite::create("listitem.png");
-	pSprite->setAnchorPoint(CCPointZero);
-	pSprite->setPosition(CCPointZero);
+	pSprite->setAnchorPoint((Vec2::ZERO));
+	pSprite->setPosition((Vec2::ZERO));
 	pCell->addChild(pSprite);
 	trace_printf("NULL");
 	CCLabelTTF *pLabel = CCLabelTTF::create("", "Arial", 20.0);
-	pLabel->setPosition(CCPointZero + Vec2(0, 20));
-	pLabel->setAnchorPoint(CCPointZero);
+	pLabel->setPosition((Vec2::ZERO) + Vec2(0, 20));
+	pLabel->setAnchorPoint((Vec2::ZERO));
 	pLabel->setTag(e_tableCellInf);
 	pCell->addChild(pLabel);
 	trace_printf("NULL");	
@@ -115,8 +115,8 @@ TableViewCell *ListViewLayer::createTableCell()
 	int diffX = VisibleRect::getVisibleRect().getMaxX()-32;
 	pLabel = CCLabelTTF::create("", "Arial", 20.0);
 	pLabel->setContentSize(Size(64, 57));
-	pLabel->setPosition(CCPointZero + Vec2(diffX, 20));
-	pLabel->setAnchorPoint(CCPointZero);
+	pLabel->setPosition((Vec2::ZERO) + Vec2(diffX, 20));
+	pLabel->setAnchorPoint((Vec2::ZERO));
 	pLabel->setTag(e_tableCellDelete);
 	pCell->addChild(pLabel);
 	return pCell;
