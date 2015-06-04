@@ -31,6 +31,11 @@ bool InVerifyLayer::init()
 	Layer::init();
 
 	initCocosStudio();
+	bool bRet = CNetClient::instance()->connect("127.0.0.1");
+	if (bRet)
+	{
+		bRet = CNetClient::instance()->login("admin", "admin");
+	}
 	return true;
 }
 
@@ -122,7 +127,7 @@ void InVerifyLayer::getAccessRepEvent(Ref *pSender, Widget::TouchEventType type)
 
 void InVerifyLayer::dealBack()
 {
-	Director::getInstance()->replaceScene(TransitionPageTurn::create(0.5f,WelcomeLayer::createScene(),true));
+	//Director::getInstance()->replaceScene(TransitionPageTurn::create(0.5f,WelcomeLayer::createScene(),true));
 }
 
 void InVerifyLayer::startTrace()
@@ -154,10 +159,13 @@ void InVerifyLayer::getAccessRep()
 	auto* textAccess = dynamic_cast<Text*>(m_inVerify->getChildByName("TextAccess"));
 	sTextAccess = textAccess->getString();
 
+	char accessRep[32];
+	strcpy(accessRep, "traceworker");
+#if defined(_DEBUG)
 	char *access = (char *)sTextAccess.c_str();
 	int accessLen = sTextAccess.size();
-	char accessRep[32];
 	CNetClient::instance()->getAccessRep(access, accessLen, accessRep);
+#endif
 
 	std::string sTextAccessRep = accessRep;
 	auto* textAccessRep = dynamic_cast<TextField*>(m_inVerify->getChildByName("TextAccessRep"));

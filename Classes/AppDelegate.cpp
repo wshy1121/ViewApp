@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "GameLayer/WelcomeLayer.h"
+#include "GameLayer/InVerifyLayer.h"
 #include "trace_worker.h"
 #include "net_server.h"
 
@@ -37,7 +37,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     CCFileUtils::getInstance()->setSearchPaths(searchPath);
 
     // create a scene. it's an autorelease object
-    auto scene = WelcomeLayer::createScene();
+    auto scene = InVerifyLayer::createScene();
 
     // run
     director->runWithScene(scene);
