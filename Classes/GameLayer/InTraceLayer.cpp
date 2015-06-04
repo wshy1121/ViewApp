@@ -222,8 +222,12 @@ void InTraceLayer::updateTraceView(float dt)
 	trace_printf("m_fileName.c_str()  %s", m_fileName.c_str());
 	CNetClient::instance()->getTraceFileInf(m_fileName.c_str(), m_traceFileInf);
 
+	int fileNameIndex = m_traceFileInf.m_fileName.find_last_of("\\");
+	fileNameIndex += 1;
+	std::string fileName = m_traceFileInf.m_fileName.substr(fileNameIndex);
+
 	char tmpchars[256];
-	snprintf(tmpchars, sizeof(tmpchars), "%s  %d", m_traceFileInf.m_fileName.c_str(), m_traceFileInf.m_count);
+	snprintf(tmpchars, sizeof(tmpchars), "%s  %d", fileName.c_str(), m_traceFileInf.m_count);
 	auto* textFileInf = dynamic_cast<ui::Text*>(m_inTraceLayout->getChildByName("FileInf"));
 	textFileInf->setString(tmpchars);
 	

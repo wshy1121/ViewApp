@@ -88,7 +88,11 @@ void ListViewLayer::formatTraceFileInf(int index, TraceFileInf &traceFileInf, ch
 		reMainSize = (traceFileInf.m_fileSize % 1024) * 100 >> 10;
 		fileSize = traceFileInf.m_fileSize >> 10;
 	}
-	snprintf(data, dataLen, "%d  %s  %d.%02d%c", index, traceFileInf.m_fileName.c_str(), traceFileInf.m_fileSize, reMainSize, units[unitsIndex]);
+	int fileNameIndex = traceFileInf.m_fileName.find_last_of("\\");
+	fileNameIndex += 1;
+	std::string fileName = traceFileInf.m_fileName.substr(fileNameIndex);
+
+	snprintf(data, dataLen, "%d  %s  %d.%02d%c", index, fileName.c_str(), traceFileInf.m_fileSize, reMainSize, units[unitsIndex]);
 	return ;
 }
 
