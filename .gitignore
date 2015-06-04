@@ -35,3 +35,4 @@ Release
 Release.win32
 /Resources
 /proj.win8.1-universal
+*.v11.suo
