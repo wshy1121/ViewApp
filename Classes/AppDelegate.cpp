@@ -2,6 +2,7 @@
 #include "GameLayer/InVerifyLayer.h"
 #include "trace_worker.h"
 #include "net_server.h"
+#include "SimpleIni.h"
 
 USING_NS_CC;
 
@@ -15,8 +16,14 @@ AppDelegate::~AppDelegate()
 
 bool AppDelegate::applicationDidFinishLaunching() {
 	CNetServer::instance()->startServer();
-	trace_start("127.0.0.1", 880110, "Debug11.cpp");
-	
+
+	CSimpleIniA ini;  
+	ini.SetUnicode();  
+	ini.LoadFile("Config.ini");  
+	const char * netCliIp = ini.GetValue("NetConfig", "NetCliIp", "default");  
+	int netCliPort = (int)ini.GetLongValue("NetConfig", "NetCliPort");
+
+	trace_start(netCliIp, netCliPort, "Debug11.cpp");
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
